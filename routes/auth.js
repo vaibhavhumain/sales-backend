@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const ADMIN_EMAIL = "admin@gobindcoach.com";
-const ADMIN_PASSWORD = "Admin@123";
+const ADMIN_PASSWORD = "Admin@GC2025";
 
 router.post("/login", async (req, res) => {
   try {
