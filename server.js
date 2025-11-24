@@ -7,10 +7,14 @@ const authRoutes = require("./routes/auth");
 const app = express();
 
 app.use(cors({
-  origin: ["https://https://salesdashboardgc.netlify.app", "*"],
+  origin: [
+    "https://salesdashboardgc.netlify.app",
+    "http://localhost:3000"
+  ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
 }));
+
 app.use(express.json());
 
 connectDB();
