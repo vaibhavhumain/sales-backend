@@ -6,7 +6,11 @@ const authRoutes = require("./routes/auth");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://https://salesdashboardgc.netlify.app", "*"],
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+}));
 app.use(express.json());
 
 connectDB();
