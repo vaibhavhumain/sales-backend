@@ -6,14 +6,17 @@ const authRoutes = require("./routes/auth");
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    "https://salesdashboardgc.netlify.app",
-    "http://localhost:3000"
-  ],
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
-}));
+app.use(
+  cors({
+    origin: [
+      "https://salesdashboardgc.netlify.app",
+      "http://localhost:3000",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
